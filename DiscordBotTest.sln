@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S3BotCmd", "DiscordBotTest\S3BotCmd.csproj", "{6F59863E-9B5E-48BD-85F3-15F5CCEE6AD8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F59863E-9B5E-48BD-85F3-15F5CCEE6AD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F59863E-9B5E-48BD-85F3-15F5CCEE6AD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F59863E-9B5E-48BD-85F3-15F5CCEE6AD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F59863E-9B5E-48BD-85F3-15F5CCEE6AD8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA9F9482-D24D-4FA0-AA91-AC039F54D6A5}
+	EndGlobalSection
+EndGlobal
