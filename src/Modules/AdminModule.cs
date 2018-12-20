@@ -57,7 +57,17 @@ namespace S3BotCmd.Modules
 
             public AttendanceResponse(JToken rawResponse)
             {
-                this.TimeSubmitted = TimeZoneInfo.ConvertTimeToUtc(DateTime.Parse(rawResponse[0].ToString()), TimeZoneInfo.FindSystemTimeZoneById("Pacific Standard Time"));
+                // Windows/linux variants as dotnetcore uses system time
+                try
+                {
+                    this.TimeSubmitted = TimeZoneInfo.ConvertTimeToUtc(DateTime.Parse(rawResponse[0].ToString()), TimeZoneInfo.FindSystemTimeZoneById("Pacific Standard Time"));
+                }
+                catch (TimeZoneNotFoundException)
+                {
+                    //Should work on linux
+                    this.TimeSubmitted = TimeZoneInfo.ConvertTimeToUtc(DateTime.Parse(rawResponse[0].ToString()), TimeZoneInfo.FindSystemTimeZoneById("America/Tijuana"));
+                }
+
                 this.DateAbsent = DateTime.Parse(rawResponse[3].ToString());
                 this.Name = rawResponse[1].ToString();
                 this.Reason = rawResponse[4].ToString();
