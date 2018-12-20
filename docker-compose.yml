@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  s3botcmd:
+    image: ${DOCKER_REGISTRY}s3botcmd
+    build:
+      context: .
+      dockerfile: src/Dockerfile
