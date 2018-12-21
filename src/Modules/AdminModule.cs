@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using S3BotCmd.Preconditions;
 namespace S3BotCmd.Modules
 {
-    [Group("admin"), RequireProperChannelAttribute]
+    [Group("admin"), RequireProperChannel]
     public class AdminModule : ModuleBase
     {
         // ~admin absences 12/20/2018
