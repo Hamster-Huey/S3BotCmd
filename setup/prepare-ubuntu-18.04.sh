@@ -8,3 +8,5 @@ sudo apt-get update
 sudo apt-get install dotnet-sdk-2.2 -y
 sudo apt-get install docker.io -y
 sudo apt-get install docker-compose -y
+chmod +x ../start.sh
+chmod +x ../stop.sh

@@ -2,7 +2,7 @@
 Discord bot for Studio 3 Company operations
 
 (Prerequisites: .Net Core 2.0 installed (maybe from here? https://dotnet.microsoft.com/download/dotnet-core/2.2) )
-## Steps to run 
+## Steps to run locally (without docker)
 1. Pull the repo
 2. cd into repo directory /src 
 3. create a file called appsettings.development.json that's a copy of appsettings.json 
