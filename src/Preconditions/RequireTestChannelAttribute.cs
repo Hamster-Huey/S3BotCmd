@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace S3BotCmd.Preconditions
 {
-    public class RequireTestChannelAttribute : PreconditionAttribute
+    // todo: look into how to turn this attribute into a way where we can specify multiple allowed channels (||)
+    public class RequireProperChannelAttribute : PreconditionAttribute
     {
         // Override the CheckPermissions method
         public async override Task<PreconditionResult> CheckPermissions(ICommandContext context, CommandInfo command, IServiceProvider services)
         {
-            if ((context.Channel.Name != "dev-test")) // Todo: can't seem to find out how to find Context.Message.Author's roles so we can scope particular commands to it
+            if ((context.Channel.Name != "dev-test" || context.Channel.Name != "set-planning" || context.Channel.Name != "leadership")) // Todo: can't seem to find out how to find Context.Message.Author's roles so we can scope particular commands to it
             {
                 return PreconditionResult.FromError("This command may only be executed in development channel");
             }
@@ -19,5 +20,4 @@ namespace S3BotCmd.Preconditions
             return PreconditionResult.FromSuccess();
         }
     }
-
 }
